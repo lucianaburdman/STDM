@@ -17,7 +17,7 @@ Finally, I will create a forest plot of hazard ratios by covariate using the ggf
 
 Final report is knitted in a pdf file with the TFLs. 
 
-# Load required packages
+# 1. Load required packages
 ```{r}
 # Load required packages
 library(tidyverse)
@@ -31,7 +31,7 @@ library(gridExtra)
 ```
 
 
-# Create simulated data and export as STDM dataset
+# 2. Create simulated data and export as STDM dataset
 
 ```{r}
 # Set seed for reproducibility
@@ -80,7 +80,7 @@ head(sdtm_data)
 ```
 
 
-# Now let's run some analyses
+# 3. Now let's run the analyses
 
 ```{r}
 # Fit Cox proportional hazards model
@@ -97,7 +97,7 @@ ggforest(cox_model, data = as.data.frame(sdtm_data))
 
 ```
 
-# Now I create TFLs for the final report and knit it to a pdf final_report
+# 4. Create of TFLs for final report and knit it to a pdf final_report
 
 ```{r}
 # Table 1: Descriptive statistics by treatment arm
@@ -183,21 +183,38 @@ Table 1: Descriptive statistics by treatment arm
 <img src="https://github.com/lucianaburdman/STDM/blob/d5f98448e4fc50abe3e6b5827b173ac10e761b2d/Table1.jpeg">
 
 
-Figure 1: Kaplan-Meier curves by treatment arm
+
+
+
 
 <img src="https://github.com/lucianaburdman/STDM/blob/d5f98448e4fc50abe3e6b5827b173ac10e761b2d/Fig1.jpeg">
 
+Figure 1: Kaplan-Meier curves by treatment arm
 
-Figure 2: Boxplots of age by treatment arm
+
+
+
+
 
 <img src="https://github.com/lucianaburdman/STDM/blob/d5f98448e4fc50abe3e6b5827b173ac10e761b2d/Fig2.jpeg">
 
+Figure 2: Boxplots of age by treatment arm
 
-Figure 3: Plot forest plot of hazard ratios by covariate
+
+
+
+
+
 
 <img src="https://github.com/lucianaburdman/STDM/blob/a773b5b7316d4f0408a75b7a4463669be6c37740/Fig3.jpeg">
 
+Figure 3: Plot forest plot of hazard ratios by covariate
 
-Listing 1: Cox proportional hazards model results
+
+
+
+
 
 <img src="https://github.com/lucianaburdman/STDM/blob/d5f98448e4fc50abe3e6b5827b173ac10e761b2d/4.jpeg">
+
+Listing 1: Cox proportional hazards model results
